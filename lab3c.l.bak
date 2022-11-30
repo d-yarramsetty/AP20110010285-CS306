@@ -1,0 +1,21 @@
+%{
+ #include<stdio.h>
+%}
+
+%%
+[\n] {printf("\n\nPls give the input: ");}
+
+[a-z A-Z _][a-z A_Z 0-9 _]* {printf("This is Identifier(letter or digit)");}
+
+
+
+.* {printf("Invalid");}
+
+%%
+
+main()
+{
+ printf("\nPls give the input: ");
+ yylex();
+ return 0;
+}

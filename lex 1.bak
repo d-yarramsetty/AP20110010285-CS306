@@ -1,0 +1,9 @@
+#include <stdio.h>
+
+int main(){
+	FILE *fp;
+	fp=fopen("lexical.txt",'w');
+	fprintf(fp,"The file is created.");
+
+	fclose(fp);
+}
